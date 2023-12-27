@@ -16,7 +16,7 @@ dependencies:
     git:
       url: git@github.com:bariskanberkay/dart_chromecast.git
   multicast_dns: ^0.3.2
-  xml: ^5.3.1
+  xml: ^6.3.0
   file: ^6.1.2
   js: ^0.6.4
   upnp2: ^3.0.6
