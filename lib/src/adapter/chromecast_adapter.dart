@@ -14,6 +14,9 @@ import '../util/utils.dart';
 const _service = '_googlecast._tcp';
 
 class ChromeCastAdapter extends CastAdapter with MediaServerMixin {
+
+
+
   final client = !Platform.isAndroid
       ? MDnsClient()
       : MDnsClient(
@@ -22,7 +25,7 @@ class ChromeCastAdapter extends CastAdapter with MediaServerMixin {
                   bool reusePort = false,
                   int ttl = 0}) =>
               RawDatagramSocket.bind(host, port,
-                  reuseAddress: reuseAddress, reusePort: reusePort, ttl: ttl));
+                  reuseAddress: true, reusePort: false, ttl: ttl));
 
   late CastSender _sender;
 
